@@ -1,0 +1,119 @@
+( pcb2gcode 2.0.0 )
+( Software-independent Gcode )
+
+( This file uses 4 drill bit sizes. )
+( Bit sizes: [1 mm] [0.8 mm] [1.001 mm] [2 mm] )
+
+G94       (Millimeters per minute feed rate.)
+G21       (Units == Millimeters.)
+G91.1     (Incremental arc distance mode.)
+G90       (Absolute coordinates.)
+G00 S6000     (RPM spindle speed.)
+
+G00 Z30.00000 (Retract)
+T1
+M5      (Spindle stop.)
+G04 P7.00000
+(MSG, Change tool bit to drill size 1 mm)
+M6      (Tool change.)
+M0      (Temporary machine stop.)
+M3      (Spindle on clockwise.)
+G0 Z4.00000
+G04 P7.00000
+
+G81 R4.00000 Z-4.00000 F300.00000 X0.00000 Y0.00000
+X0.00000 Y2.00000
+X0.00000 Y4.00000
+X0.00000 Y6.00000
+X23.00000 Y6.00000
+X23.00000 Y4.00000
+X23.00000 Y2.00000
+X23.00000 Y0.00000
+X46.00000 Y6.00000
+X46.00000 Y4.00000
+X46.00000 Y2.00000
+X46.00000 Y0.00000
+X6.44700 Y33.32400
+X4.44700 Y33.32400
+X2.44700 Y33.32400
+X0.44700 Y33.32400
+
+G00 Z30.00000 (Retract)
+T2
+M5      (Spindle stop.)
+G04 P7.00000
+(MSG, Change tool bit to drill size 0.8 mm)
+M6      (Tool change.)
+M0      (Temporary machine stop.)
+M3      (Spindle on clockwise.)
+G0 Z4.00000
+G04 P7.00000
+
+G81 R4.00000 Z-4.00000 F300.00000 X0.25000 Y-8.30000
+X-5.75000 Y14.30000
+X-7.85300 Y27.57400
+X14.74700 Y33.57400
+X17.25000 Y14.30000
+X23.25000 Y-8.30000
+X40.25000 Y14.30000
+X46.25000 Y-8.30000
+
+G00 Z30.00000 (Retract)
+T3
+M5      (Spindle stop.)
+G04 P7.00000
+(MSG, Change tool bit to drill size 1.001 mm)
+M6      (Tool change.)
+M0      (Temporary machine stop.)
+M3      (Spindle on clockwise.)
+G0 Z4.00000
+G04 P7.00000
+
+G81 R4.00000 Z-4.00000 F300.00000 X-14.82900 Y-17.07800
+X-14.82900 Y33.08700
+X56.54500 Y-18.60200
+X59.08500 Y37.40500
+
+G00 Z30.00000 (Retract)
+T4
+M5      (Spindle stop.)
+G04 P7.00000
+(MSG, Change tool bit to drill size 2 mm)
+M6      (Tool change.)
+M0      (Temporary machine stop.)
+M3      (Spindle on clockwise.)
+G0 Z4.00000
+G04 P7.00000
+
+G81 R4.00000 Z-4.00000 F300.00000 X-7.20000 Y-8.10000
+X-2.75000 Y-9.00000
+X3.20000 Y-8.10000
+X15.80000 Y-8.10000
+X20.25000 Y-9.00000
+X26.20000 Y-8.10000
+X38.80000 Y-8.10000
+X43.25000 Y-9.00000
+X49.20000 Y-8.10000
+X49.20000 Y14.10000
+X43.25000 Y15.00000
+X37.30000 Y14.10000
+X26.20000 Y14.10000
+X20.25000 Y15.00000
+X14.30000 Y14.10000
+X3.20000 Y14.10000
+X-2.75000 Y15.00000
+X-8.70000 Y14.10000
+X-7.65300 Y24.62400
+X-8.55300 Y30.57400
+X-7.65300 Y36.52400
+X14.54700 Y36.52400
+X15.44700 Y30.57400
+X14.54700 Y26.12400
+
+G00 Z30.000 ( All done -- retract )
+
+M5      (Spindle off.)
+G04 P7.000000
+M9      (Coolant off.)
+M2      (Program end.)
+
