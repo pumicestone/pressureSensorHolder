@@ -68,4 +68,6 @@ Wire Wire Line
 	3875 2000 4250 2000
 Wire Wire Line
 	3875 2400 4250 2400
+Text Notes 3825 1750 0    50   ~ 0
+and digital xD
 $EndSCHEMATC

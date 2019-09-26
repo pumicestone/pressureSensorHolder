@@ -37,16 +37,16 @@ F 3 "~" H 3750 2975 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3550 2875 3225 2875
-Text Label 3225 2875 0    50   ~ 0
-Vdd
-Text Label 3225 3175 0    50   ~ 0
-GND
-Wire Wire Line
 	3550 2975 3200 2975
 Text Label 3200 2975 0    50   ~ 0
-OCS_SCL
+Vdd
 Text Label 3200 3075 0    50   ~ 0
+GND
+Wire Wire Line
+	3550 2875 3200 2875
+Text Label 3200 2875 0    50   ~ 0
+OCS_SCL
+Text Label 3200 3175 0    50   ~ 0
 AOut_SDA
 Wire Wire Line
 	3075 2400 2725 2400
@@ -57,9 +57,9 @@ Wire Wire Line
 Text Label 2725 2000 0    50   ~ 0
 OCS_SCL
 Wire Wire Line
-	3550 3075 3200 3075
+	3550 3175 3200 3175
 Wire Wire Line
-	3550 3175 3225 3175
+	3550 3075 3200 3075
 Text Label 4250 2400 2    50   ~ 0
 GND
 Text Label 4250 2000 2    50   ~ 0
