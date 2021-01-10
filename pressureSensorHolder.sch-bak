@@ -36,12 +36,6 @@ F 3 "~" H 5450 3125 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5250 3125 4900 3125
-Text Label 4900 3125 0    50   ~ 0
-Vdd
-Text Label 4900 3225 0    50   ~ 0
-GND
-Wire Wire Line
 	5250 3025 4900 3025
 Text Label 4900 3025 0    50   ~ 0
 OCS_SCL
@@ -49,18 +43,12 @@ Text Label 4900 3325 0    50   ~ 0
 AOut_SDA
 Wire Wire Line
 	3075 2400 2900 2400
-Text Label 2725 2400 0    50   ~ 0
-Vdd
 Wire Wire Line
 	3075 2000 2725 2000
 Text Label 2725 2000 0    50   ~ 0
 OCS_SCL
 Wire Wire Line
 	5250 3325 4900 3325
-Wire Wire Line
-	5250 3225 4900 3225
-Text Label 4250 2400 2    50   ~ 0
-GND
 Text Label 4250 2000 2    50   ~ 0
 AOut_SDA
 Wire Wire Line
@@ -84,12 +72,8 @@ Text Label 5300 2550 1    50   ~ 0
 OCS_SCL
 Wire Wire Line
 	5300 2550 5300 2075
-Text Label 4850 1925 0    50   ~ 0
-Vdd
 Wire Wire Line
 	4850 1925 5100 1925
-Text Label 5675 1925 2    50   ~ 0
-GND
 Wire Wire Line
 	5725 1925 5500 1925
 $Comp
@@ -107,12 +91,8 @@ Wire Wire Line
 	2900 2450 2900 2400
 Connection ~ 2900 2400
 Wire Wire Line
-	2900 2400 2725 2400
-Wire Wire Line
 	2900 2750 4025 2750
 Connection ~ 4025 2400
-Wire Wire Line
-	4025 2400 4250 2400
 Wire Wire Line
 	4025 2750 4025 2400
 $Comp
@@ -150,4 +130,136 @@ F 3 "" H 5725 2050 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5725 2050 5725 1925
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5FEE46CE
+P 2875 3700
+F 0 "H1" H 2975 3746 50  0000 L CNN
+F 1 "MountingHole" H 2975 3655 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 2875 3700 50  0001 C CNN
+F 3 "~" H 2875 3700 50  0001 C CNN
+	1    2875 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 5FEE4792
+P 2875 3950
+F 0 "H2" H 2975 3996 50  0000 L CNN
+F 1 "MountingHole" H 2975 3905 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 2875 3950 50  0001 C CNN
+F 3 "~" H 2875 3950 50  0001 C CNN
+	1    2875 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 5FEC7B2D
+P 3350 3250
+F 0 "D?" H 3343 2995 50  0000 C CNN
+F 1 "LED" H 3343 3086 50  0000 C CNN
+F 2 "" H 3350 3250 50  0001 C CNN
+F 3 "~" H 3350 3250 50  0001 C CNN
+	1    3350 3250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5FEC8504
+P 3800 3250
+F 0 "R?" V 4007 3250 50  0000 C CNN
+F 1 "R" V 3916 3250 50  0000 C CNN
+F 2 "" V 3730 3250 50  0001 C CNN
+F 3 "~" H 3800 3250 50  0001 C CNN
+	1    3800 3250
+	0    -1   -1   0   
+$EndComp
+Text Label 2950 3250 0    50   ~ 0
+Vdd
+Wire Wire Line
+	3200 3250 2950 3250
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5FEC9AEA
+P 2500 2250
+F 0 "#PWR?" H 2500 2100 50  0001 C CNN
+F 1 "+3V3" H 2515 2423 50  0000 C CNN
+F 2 "" H 2500 2250 50  0001 C CNN
+F 3 "" H 2500 2250 50  0001 C CNN
+	1    2500 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5FEC9D02
+P 2700 3200
+F 0 "#PWR?" H 2700 3050 50  0001 C CNN
+F 1 "+3V3" H 2715 3373 50  0000 C CNN
+F 2 "" H 2700 3200 50  0001 C CNN
+F 3 "" H 2700 3200 50  0001 C CNN
+	1    2700 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5FEC9EF5
+P 4850 1750
+F 0 "#PWR?" H 4850 1600 50  0001 C CNN
+F 1 "+3V3" H 4865 1923 50  0000 C CNN
+F 2 "" H 4850 1750 50  0001 C CNN
+F 3 "" H 4850 1750 50  0001 C CNN
+	1    4850 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 1750 4850 1925
+$Comp
+L power:GND #PWR?
+U 1 1 5FECB1A8
+P 4275 2700
+F 0 "#PWR?" H 4275 2450 50  0001 C CNN
+F 1 "GND" H 4280 2527 50  0000 C CNN
+F 2 "" H 4275 2700 50  0001 C CNN
+F 3 "" H 4275 2700 50  0001 C CNN
+	1    4275 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4275 2400 4275 2700
+Wire Wire Line
+	4025 2400 4275 2400
+Wire Wire Line
+	2500 2250 2500 2400
+Wire Wire Line
+	2500 2400 2900 2400
+$Comp
+L power:GND #PWR?
+U 1 1 5FED0196
+P 4775 3325
+F 0 "#PWR?" H 4775 3075 50  0001 C CNN
+F 1 "GND" H 4780 3152 50  0000 C CNN
+F 2 "" H 4775 3325 50  0001 C CNN
+F 3 "" H 4775 3325 50  0001 C CNN
+	1    4775 3325
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4775 3325 4775 3225
+Wire Wire Line
+	4775 3225 5250 3225
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5FED0B8F
+P 4775 3025
+F 0 "#PWR?" H 4775 2875 50  0001 C CNN
+F 1 "+3V3" H 4790 3198 50  0000 C CNN
+F 2 "" H 4775 3025 50  0001 C CNN
+F 3 "" H 4775 3025 50  0001 C CNN
+	1    4775 3025
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4775 3025 4775 3125
+Wire Wire Line
+	4775 3125 5250 3125
 $EndSCHEMATC
